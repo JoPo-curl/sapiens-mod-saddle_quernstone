@@ -1,0 +1,43 @@
+{
+	"$schema": "https://raw.githubusercontent.com/Sapiens-OSS/hammerstone-schemas/main/schemas/object.schema.json",
+	"hammerstone:object_definition": {
+		"description": {
+			"identifier": "saddle_quern"
+		},
+		"components": {
+			"hs_object": {
+				"model": "rockSaddleQuern"
+			},
+			"hs_resource": {
+				"storage_identifier": "quernstone"
+			},
+			"hs_tool": {
+				"grinding": {
+					"durability": 3,
+					"speed": 1
+				}
+			},
+			"hs_craftable": {
+				"skill": "toolAssembly",
+				"action_sequence": "toolAssembly",
+				"tool": "knapping",
+				"hs_output": {
+					"simple_output": [
+						"saddle_quern"
+					]
+				},
+				"resources": [
+					{
+						"resource": "rock",
+						"count": 2,
+						"action": {
+							"action_type": "knap",
+							"duration": 5,
+							"duration_without_skill": 15
+						}
+					}
+				]
+			}
+		}
+	}
+}
